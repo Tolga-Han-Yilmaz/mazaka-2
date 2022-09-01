@@ -73,8 +73,8 @@
 
   .category {
     .category__btn {
-      .category__btn-filter {
-        grid-column: span 2;
+      div {
+        grid-column: span 4;
       }
     }
   }
@@ -110,6 +110,15 @@
           grid-column: span 1;
           gap: 0.1rem;
         }
+      }
+    }
+  }
+  .category {
+    .category__btn {
+      grid-template-columns: repeat(10, 1fr);
+
+      div {
+        grid-column: span 1;
       }
     }
   }
