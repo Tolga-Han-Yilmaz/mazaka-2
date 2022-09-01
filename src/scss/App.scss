@@ -24,6 +24,7 @@ $custom-theme-colors: (
 @import "./components/responsive";
 @import "./pages/productdetails.module.scss";
 @import "./components/navbarcategory.module.scss";
+@import "./components/productfilter.module.scss";
 
 body {
   line-height: 1;

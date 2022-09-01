@@ -4,6 +4,7 @@ import ProductInfo from "../components/ProductInfo";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../features/productsSlice";
 import Loading from "../components/Loading";
+import ProductFilter from "../components/ProductFilter";
 
 const Home = () => {
   // productsSlice.jsx'de axios ile çağrılan ürünler buruya gönderildi.
@@ -53,6 +54,7 @@ const Home = () => {
             categoryList={categoryList}
             handleFiltered={handleFiltered}
           />
+          <ProductFilter />
           <ProductInfo
             menuItems={menuItems}
             isShow={isShow}

@@ -1,0 +1,33 @@
+.productfilter {
+  margin: 2rem auto;
+  .productfilter__info {
+    span {
+      color: $green;
+    }
+  }
+  .productfilter__div {
+    gap: 0.5rem;
+    .productfilter__div-select {
+      gap: 0.5rem;
+    }
+
+    .productfilter__div-order {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      .productfilter-icon {
+        grid-column: span 1;
+        cursor: pointer;
+        font-size: 25px;
+        opacity: 0.8;
+        &:nth-child(2) {
+          color: $purple;
+        }
+      }
+      .form-select {
+        grid-column: span 10;
+        width: 90%;
+      }
+    }
+  }
+}

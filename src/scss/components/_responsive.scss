@@ -40,6 +40,13 @@
       }
     }
   }
+  .productfilter {
+    .productfilter__div {
+      .productfilter__div-select {
+        display: flex;
+      }
+    }
+  }
   footer {
     .footer__div {
       width: 600px;
@@ -75,6 +82,15 @@
     .category__btn {
       div {
         grid-column: span 4;
+      }
+    }
+  }
+  .productfilter {
+    .productfilter__div {
+      display: flex;
+      justify-content: space-between;
+      .productfilter__div-select {
+        display: flex;
       }
     }
   }
