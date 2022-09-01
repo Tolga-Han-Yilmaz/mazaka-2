@@ -23,6 +23,7 @@ $custom-theme-colors: (
 @import "./components/footer.module.scss";
 @import "./components/responsive";
 @import "./pages/productdetails.module.scss";
+@import "./components/navbarcategory.module.scss";
 
 body {
   line-height: 1;

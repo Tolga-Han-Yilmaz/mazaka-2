@@ -62,7 +62,15 @@
         justify-content: center;
       }
     }
+    .navbar {
+      .navbar__category {
+        .navbar__category-div {
+          grid-column: span 4;
+        }
+      }
+    }
   }
+
   .category {
     .category__btn {
       .category__btn-filter {
@@ -92,6 +100,19 @@
 }
 
 @include media-lg {
+  header {
+    .navbar {
+      .navbar__category {
+        grid-template-columns: repeat(10, 1fr);
+
+        // gap: 1rem;
+        .navbar__category-div {
+          grid-column: span 1;
+          gap: 0.1rem;
+        }
+      }
+    }
+  }
   .productlist {
     .card {
       grid-column: span 4;

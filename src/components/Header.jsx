@@ -1,5 +1,11 @@
-import { FaShoppingCart, FaRegUser, FaSearch } from "react-icons/fa";
+import {
+  FaShoppingCart,
+  FaRegUser,
+  FaSearch,
+  FaRegBookmark,
+} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import NavbarCategory from "./NavbarCategory";
 const Header = () => {
   const navigate = useNavigate();
   return (
@@ -30,9 +36,11 @@ const Header = () => {
           </div>
           <div className="navbar__user">
             <FaShoppingCart className="icon" />
+            <FaRegBookmark className="icon" />
             <FaRegUser className="icon" />
           </div>
         </div>
+        <NavbarCategory />
       </nav>
     </header>
   );

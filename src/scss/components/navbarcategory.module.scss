@@ -1,0 +1,58 @@
+.navbar__category {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: auto;
+  .navbar__category-info {
+    grid-column: span 12;
+    div {
+      width: 50%;
+    }
+  }
+  .navbar__category-div {
+    grid-column: span 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    cursor: pointer;
+    p {
+      font-size: 0.75rem;
+      margin: auto;
+    }
+    .navbar-icon {
+      font-size: 22px;
+
+      &:nth-child(1) {
+        color: $purple;
+      }
+      &:nth-child(2) {
+        color: $orange;
+      }
+      &:nth-child(3) {
+        color: $red;
+      }
+      &:nth-child(4) {
+        color: $green;
+      }
+      &:nth-child(5) {
+        color: $yellow;
+      }
+      &:nth-child(6) {
+        color: $red-600;
+      }
+      &:nth-child(7) {
+        color: $blue-300;
+      }
+      &:nth-child(8) {
+        color: $blue-500;
+      }
+      &:nth-child(9) {
+        color: $yellow;
+      }
+      &:nth-child(10) {
+        color: $purple;
+      }
+    }
+  }
+}
