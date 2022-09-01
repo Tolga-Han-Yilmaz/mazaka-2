@@ -88,6 +88,11 @@
   }
 
   .category {
+    .navbar__category-info {
+      div {
+        width: 50%;
+      }
+    }
     .category__btn {
       div {
         grid-column: span 4;

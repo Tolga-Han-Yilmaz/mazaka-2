@@ -35,7 +35,6 @@ const ProductFilter = () => {
           >
             {kategoriler.map((kategori, index) => {
               <option selected>Markalar</option>;
-
               return (
                 <option value={kategori} key={index}>
                   {kategori}
