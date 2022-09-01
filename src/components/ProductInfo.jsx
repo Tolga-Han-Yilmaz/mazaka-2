@@ -14,6 +14,7 @@ const ProductInfo = ({ productsList }) => {
     await navigate("/product", { state: navigateToDetail }); // ProductDetail.jsx'e gönderildi
   };
 
+  // pagination işlemi
   const handlePage = (e) => {
     let number = Number(e.target.value);
     setItems(productsList?.slice(12 * number - 12, 12 * number));
@@ -23,9 +24,13 @@ const ProductInfo = ({ productsList }) => {
     <div>
       <div className="productlist container">
         {isShow
-          ? productsList?.slice(0, 12).map((product) => {
+          ? productsList?.slice(0, 12).map((product, index) => {
               return (
-                <div className="card" onClick={() => handleClick(product.id)}>
+                <div
+                  className="card"
+                  onClick={() => handleClick(product.id)}
+                  key={index}
+                >
                   <Helmet>
                     <title>{product.category}</title>
                     <meta name="description" content={product.category} />
@@ -36,12 +41,12 @@ const ProductInfo = ({ productsList }) => {
                     className="card__image"
                   />
                   <div className="card__info p-1 text-center">
-                    <h5>{product.name}</h5>
+                    <h5 className="hoverpurple">{product.name}</h5>
                     <p className="fs-6">350 GR</p>
                     <p className="text-decoration-line-through">
                       {Number(product.price) + 5} ₺
                     </p>
-                    <p className="fs-3">{product.price} ₺</p>
+                    <p className="fs-3 hoverpurple">{product.price} ₺</p>
                   </div>
                   <div className="card__over">
                     <div>
@@ -54,9 +59,13 @@ const ProductInfo = ({ productsList }) => {
                 </div>
               );
             })
-          : items?.map((product) => {
+          : items?.map((product, index) => {
               return (
-                <div className="card" onClick={() => handleClick(product.id)}>
+                <div
+                  className="card"
+                  onClick={() => handleClick(product.id)}
+                  key={index}
+                >
                   <Helmet>
                     <title>{product.category}</title>
                     <meta name="description" content={product.category} />
@@ -67,12 +76,12 @@ const ProductInfo = ({ productsList }) => {
                     className="card__image"
                   />
                   <div className="card__info p-1 text-center">
-                    <h5>{product.name}</h5>
+                    <h5 className="hoverpurple">{product.name}</h5>
                     <p className="fs-6">350 GR</p>
                     <p className="text-decoration-line-through">
                       {Number(product.price) + 5} ₺
                     </p>
-                    <p className="fs-3">{product.price} ₺</p>
+                    <p className="fs-3 hoverpurple">{product.price} ₺</p>
                   </div>
                   <div className="card__over">
                     <div>
@@ -85,11 +94,12 @@ const ProductInfo = ({ productsList }) => {
                 </div>
               );
             })}
-      </div>
-      <div onClick={(e) => handlePage(e)} className="productlist__container">
-        <button value="1">1</button>
-        <button value="2">2</button>
-        <button value="3">3</button>
+
+        <div onClick={(e) => handlePage(e)} className="productlist__pagination">
+          <button value="1">1</button>
+          <button value="2">2</button>
+          <button value="3">3</button>
+        </div>
       </div>
     </div>
   );

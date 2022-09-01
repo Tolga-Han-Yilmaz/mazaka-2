@@ -13,20 +13,9 @@ import {
 } from "react-icons/fa";
 
 const NavbarCategory = () => {
-  const handleClick = (e) => {
-    console.log(e.target.lastChild);
-    let val = "";
-    if (e.target.className) {
-      val = e.target.value;
-    }
-    console.log(val);
-  };
   return (
-    <div
-      className="navbar__category container"
-      //  onClick={(e) => handleClick(e)}
-    >
-      <div className="navbar__category-div">
+    <div className="navbar__category container mt-4">
+      <div className="navbar__category-div ">
         <FaShoppingBasket className="navbar-icon" />
         <p value="Markalarımız" className="navbar-text">
           Markalarımız
@@ -57,7 +46,7 @@ const NavbarCategory = () => {
         <p>Organik</p>
       </div>
       <div className="navbar__category-div">
-        <FaChild className="navbar-icon" />
+        <FaChild className="navbar-icon " />
         <p>Anne & Çocuk</p>
       </div>
       <div className="navbar__category-div">
@@ -67,15 +56,6 @@ const NavbarCategory = () => {
       <div className="navbar__category-div">
         <FaThumbsUp className="navbar-icon" />
         <p>Fırsatlar</p>
-      </div>
-      <div className="navbar__category-info">
-        <div>
-          <h3>{}</h3>
-          <p>
-            E-Hamal'da Kumbara sistemi var. Yaptığın alışverişlerden Türk Lirası
-            biriktir. Kazandığın paralarla tekrar alışveriş yap.
-          </p>
-        </div>
       </div>
     </div>
   );

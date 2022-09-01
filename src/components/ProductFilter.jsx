@@ -4,7 +4,6 @@ import { FaGripHorizontal, FaGripVertical } from "react-icons/fa";
 const ProductFilter = () => {
   const [productCategory, setProductCategory] = useState("Markalar");
   const kategoriler = [
-    "Markalar",
     "Organik & Meyve Sebze",
     "Kahvaltılık",
     "Atıştırmalık",
@@ -35,6 +34,8 @@ const ProductFilter = () => {
             onClick={(e) => handleClick(e)}
           >
             {kategoriler.map((kategori, index) => {
+              <option selected>Markalar</option>;
+
               return (
                 <option value={kategori} key={index}>
                   {kategori}
@@ -52,14 +53,14 @@ const ProductFilter = () => {
               );
             })}
           </select>
-          <div class="form-check">
+          <div className="form-check">
             <input
               className="form-check-input"
               type="checkbox"
               value=""
               id="flexCheckDefault"
             />
-            <label className="form-check-label" for="flexCheckDefault">
+            <label className="form-check-label" htmlFor="flexCheckDefault">
               Tükenenleri Gösterme{" "}
             </label>
           </div>

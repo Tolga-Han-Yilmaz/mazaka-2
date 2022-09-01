@@ -25,7 +25,7 @@ const Header = () => {
         </div>
       </div>
 
-      <nav className="navbar">
+      <nav className="navbar my-2">
         <div className="container">
           <div className="deneme"></div>
           <div className="navbar__search input-group mb-3">
@@ -40,6 +40,7 @@ const Header = () => {
             <FaRegUser className="icon" />
           </div>
         </div>
+
         <NavbarCategory />
       </nav>
     </header>

@@ -1,5 +1,15 @@
 .category {
-  padding: 2rem;
+  padding: 0.5rem 2rem;
+
+  .navbar__category-info {
+    line-height: 1.5rem;
+    div {
+      width: 50%;
+      h3 {
+        color: $purple;
+      }
+    }
+  }
   .category__btn {
     margin-bottom: 4rem;
     display: grid;
@@ -40,7 +50,6 @@
         border-radius: 0.2rem;
 
         &:hover {
-          // background: $orange-400;
           color: $purple;
         }
       }

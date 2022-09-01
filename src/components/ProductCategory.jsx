@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const ProductCategory = ({ categoryList, handleFiltered }) => {
+const ProductCategory = () => {
   const [categories, setCategories] = useState([]);
   const getCategories = async () => {
     const url = "https://powerful-savannah-74330.herokuapp.com/categories";
@@ -18,16 +18,21 @@ const ProductCategory = ({ categoryList, handleFiltered }) => {
   }, []);
   return (
     <div className="category container">
+      <div className="navbar__category-info mt-4">
+        <div>
+          <h3>Kahvaltılık</h3>
+          <p>
+            E-Hamal'da Kumbara sistemi var. Yaptığın alışverişlerden Türk Lirası
+            biriktir. Kazandığın paralarla tekrar alışveriş yap.
+          </p>
+        </div>
+      </div>
       <div className="category__btn">
         {categories?.map((category, index) => {
           return (
             <div key={index}>
               <img src={category.image} alt={category.name} />
-              <button
-                className="category__btn-filter"
-                key={index}
-                // onClick={() => handleFiltered(category)}
-              >
+              <button className="category__btn-filter" key={index}>
                 {category.name}
               </button>
             </div>

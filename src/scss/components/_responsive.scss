@@ -6,11 +6,10 @@
       .container {
         flex-direction: row;
         justify-content: flex-end;
-
         position: relative;
         .header__title-home {
           position: absolute;
-          top: 0;
+          top: 0.5rem;
           left: 0;
           z-index: 999;
         }
@@ -35,7 +34,10 @@
         }
         .navbar__user {
           grid-column: span 2;
-          width: auto;
+          width: 100%;
+          .icon {
+            font-size: 1.8rem;
+          }
         }
       }
     }
@@ -70,6 +72,13 @@
       }
     }
     .navbar {
+      .container {
+        .navbar__user {
+          .icon {
+            font-size: 1.8rem;
+          }
+        }
+      }
       .navbar__category {
         .navbar__category-div {
           grid-column: span 4;
@@ -120,8 +129,6 @@
     .navbar {
       .navbar__category {
         grid-template-columns: repeat(10, 1fr);
-
-        // gap: 1rem;
         .navbar__category-div {
           grid-column: span 1;
           gap: 0.1rem;
@@ -132,7 +139,6 @@
   .category {
     .category__btn {
       grid-template-columns: repeat(10, 1fr);
-
       div {
         grid-column: span 1;
       }
